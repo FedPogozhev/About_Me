@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="myName"
+            type="com.fedx.aboutme.MyName" />
+    </data>
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView
+            style="@style/NameStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={myName.name}"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/etNickName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="What is your Nickname"
+            android:inputType="textImeMultiLine|textPersonName"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/btn"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/done" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/btn_star_big_on" />
+
+        <TextView
+            android:id="@+id/tvNickName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={myName.nickname}"
+            android:textAlignment="center" />
+
+        <ScrollView
+            android:id="@+id/bio_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/NameStyle"
+                android:text="@string/loren_ipsum" />
+        </ScrollView>
+
+
+    </LinearLayout>
+</layout>
